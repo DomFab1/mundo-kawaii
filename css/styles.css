@@ -1,0 +1,580 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background: #fff0f6; /* Fondo muy suave rosa pastel */
+  color: #6a1b9a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Banner rosa pastel suave con degradado */
+.banner-pink {
+  width: 90%;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #ffe3f1, #f9bbd0, #ffedf3);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(249, 187, 208, 0.6);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.banner-logo {
+  width: 130px;
+  height: auto;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+}
+
+.banner-logo:hover {
+  transform: scale(1.1);
+}
+
+.banner-title {
+  font-size: 3rem;
+  color: #b94a86;
+  text-shadow:
+    0 0 8px #f9bbd0,
+    0 0 15px #ffcdf7;
+  font-weight: 900;
+  user-select: none;
+    
+}
+
+/* Menú */
+.menu {
+  width: 90%;
+  max-width: 1200px;
+  background: #ffdeed;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(249, 187, 208, 0.7);
+  margin-bottom: 40px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.menu-button {
+  background: #f9bbd0;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #6a1b9a;
+  transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+  background: #d86ca7;
+  color: white;
+}
+
+.search-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  gap: 10px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #f9bbd0;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+#search-button {
+  background: #f8a1c4;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-button:hover {
+  background: #d86ca7;
+}
+
+/* Cards estilo Netflix */
+.video-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  margin-top: 40px; /* separa las cards del contenido superior */
+}
+
+@media (max-width: 900px) {
+  .video-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .video-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .video-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.card {
+  background: #141414;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.9);
+}
+
+.card:hover img {
+  transform: scale(1.12);
+}
+
+.card-info {
+  padding: 12px 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card:hover .card-info {
+  opacity: 1;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #e50914; /* rojo Netflix */
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  opacity: 0.9;
+  margin: 0;
+}
+
+#modal-section {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;  
+  z-index: 1000;
+  overflow-y: auto; /* Permite scroll si el contenido es muy alto */
+  padding: 20px; /* Espacio para que no quede pegado a los bordes en móviles */
+}
+
+#modal-section.active {
+  display: flex; /* Se muestra con clase "active" */
+}
+
+.modal-content {
+  background: #181818;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 30px #e5091475;
+  color: white;
+  position: relative;
+}
+
+/* Botón cerrar */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #e50914;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+/* Video */
+#modal-video {
+  width: 100%;
+  border-radius: 10px;
+  background: black;
+  margin-bottom: 15px;
+}
+
+/* Imagen */
+#modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* Título */
+#modal-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #e50914;
+}
+
+/* Descripción */
+#modal-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+  opacity: 0.9;
+}
+
+/* Botón pantalla completa */
+#fullscreen-btn {
+  background: #e50914;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#fullscreen-btn:hover {
+  background: #d86ca7;
+}
+
+/* --- Responsive definitivo para Mundo.Kawaii --- */
+
+@media (max-width: 1024px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .banner-pink {
+    flex-direction: column;
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .banner-logo {
+    margin: 0 0 15px 0;
+    width: 110px;
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+  }
+
+  .menu-list {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .menu-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #search-input, #search-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .video-cards {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 18px;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  .card-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-info p {
+    font-size: 0.85rem;
+  }
+
+  #modal-video {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px 5px;
+  }
+
+  .banner-pink {
+    padding: 20px 10px;
+  }
+
+  .banner-logo {
+    width: 60px;
+  }
+
+  .banner-title {
+    font-size: 1.9rem;    
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    
+  }
+
+  .menu-button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+
+  .search-container {
+    gap: 12px;
+  }
+
+  .video-cards {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-info h3 {
+    font-size: 1rem;
+  }
+
+  .card-info p {
+    font-size: 0.8rem;
+  }
+
+  #modal-video {
+    max-height: 240px;
+  }
+}
+
+/* Efecto de texto al pasar el mouse */
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.9em;
+  opacity: 0;
+  padding: 5px 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .hover-text {
+  opacity: 1;
+}
+
+/* Fade-in al cargar imágenes */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in[src] {
+  opacity: 1;
+}
+
+/* Sombra en tarjetas */
+.card {
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* Modal fade */
+#modal-section.active {
+  display: flex;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* MENSAJE DE NO RESULTADO */
+.no-result {
+  grid-column: 1 / -1;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.4rem;
+  background: #ffdeed;
+  border-radius: 15px;
+  color: #c2185b;
+  font-weight: 900;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 🎀 BOTÓN HAMBURGUESA FINAL (mejorado y unificado) */
+.hamburguesa {
+  font-size: 30px;           /* Tamaño grande y visible */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;             /* Oculto en escritorio */
+  color: white;              /* Se adapta a tu tema oscuro */
+  margin: 10px;              /* Espacio alrededor */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* 🎀 Animación al activar (rotación kawaii 😄) */
+.hamburguesa.active {
+  transform: rotate(90deg);
+  opacity: 0.8;
+}
+
+/* 🎀 Estilos móviles */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block; /* Mostrar el botón en móvil */
+  }
+
+  .menu-list {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px; /* espacio entre botones */
+  }
+
+  .menu-list.active {
+    display: flex; /* Mostrar menú al abrir */
+  }
+
+  .menu-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: flex-end; /* los alinea a la derecha */
+  gap: 10px; /* espacio entre botones */
+  margin-top: 10px;
+}
+
+.nav-btn, #fullscreen-btn {
+  background-color: #e50914; /* rojo Netflix */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover, #fullscreen-btn:hover {
+  background-color: #f40612; /* rojo más intenso al pasar el mouse */
+}

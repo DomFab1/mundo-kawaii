@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <title>Mundo.Kawaii - Videos</title>
+</head>
+<body>
+  <!-- Banner -->
+  <section id="banner-section" class="banner-pink">
+    <a href="/" title="Ir a Inicio">
+      <img
+        src="imagen/logo/dlk.webp"
+        alt="Logo Mundo.Kawaii"
+        class="banner-logo"
+      />
+    </a>
+    <h1 class="banner-title">🌸 Mundo.Kawaii 🌸</h1>
+  </section>
+
+  <!-- Menú -->
+  <nav id="menu-section" class="menu">
+    <button id="hamburguesa-btn" class="hamburguesa">☰</button>
+    <ul class="menu-list">      
+      <li><button class="menu-button" data-category="anime">🌸 Anime</button></li>
+      <li><button class="menu-button" data-category="drama">🏮 Drama Chino</button></li>
+      <li><button class="menu-button" data-category="series">🎬 Series Chinas</button></li>
+      <li><button class="menu-button" data-category="peliculas">🍿 Películas</button></li>
+      <li><button class="menu-button" data-category="entretenimiento">🍿 Entretenimiento</button></li>
+    </ul>
+  </nav>
+
+  <!-- Buscador -->
+  <section id="search-section" class="search-container">
+    <input type="text" placeholder="🔍 Buscar videos..." id="search-input" />
+    <button id="search-button" aria-label="Buscar">Buscar</button>
+  </section>
+
+  <!-- Sección Videos -->
+  <section id="videos-section" class="videos-section">
+    <h2>✨ Videos Kawaii ✨</h2>
+    <div class="video-cards">
+      <!-- Aquí se generan las tarjetas -->
+    </div>
+  </section>
+
+  <!-- Modal (ya existente) -->
+  <section id="modal-section" class="modal" aria-hidden="true" tabindex="-1">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <img id="modal-image" src="" alt="" />
+      <p id="modal-description"></p>
+      <video id="modal-video" controls></video>     
+    </div>
+  </section>      
+
+      
+
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
