@@ -106,77 +106,77 @@ const peliculas = [
     titulo: "Thor",
     imagen: "imagen/thor.webp",
     descripcion: "“Thor, el dios rudo, aprende a ser un héroe con mucho corazón y rayos mágicos ⚡🌸.”",
-    videoUrl: "video/THR1-1080.mp4",
+    videoUrl: "video/peliculas/thor.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Thor: un mundo oscuro",
     imagen: "imagen/thor2.webp",
     descripcion: "“Thor regresa con su martillo y amigos, luchando contra villanos con mucha fuerza y brillo ✨🔨🌸.”",
-    videoUrl: "video/",
+    videoUrl: "video/peliculas/mundooscuro.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Thor: Ragnarok",
     imagen: "imagen/thor3.jpg",
     descripcion: "“Thor enfrenta aventuras cósmicas llenas de risas, peleas épicas y nuevos amigos galácticos 🌟⚡😂.”",
-    videoUrl: "video/THRRGNRK-1080.mp4",
+    videoUrl: "video/peliculas/ragnarok.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Thor: Amor y trueno",
     imagen: "imagen/thor4.jpg",
     descripcion: "“Thor vuelve con más poder, nuevos desafíos y un viaje lleno de corazón y diversión 🌈⚡💖.”",
-    videoUrl: "video/amorytrueno.mp4",
+    videoUrl: "video/peliculas/amortrueno.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Avenger: Los Vengadores",
     imagen: "imagen/avenger.webp",
     descripcion: "“Los héroes más poderosos se juntan para salvar el mundo con mucho teamwork y valentía 💥🦸‍♂️🌸.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/vengadores.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Avenger: La era Ultron",
     imagen: "imagen/vengadores2.jpg",
     descripcion: "“Los héroes se unen para detener a Ultrón, una mente que quiere acabar con todo 🤖🔥.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/eraultron.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Avenger: Infinity War",
     imagen: "imagen/infinity3.jpg",
     descripcion: "“Los héroes se unen para detener a Thanos antes de que consiga todas las Gemas del Infinito 💎🔥.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/infinitywar.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Avenger: Endgame",
     imagen: "imagen/endgame4.jpg",
     descripcion: "“Los héroes enfrentan su batalla final contra Thanos para salvar el universo 💫🔥.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/endgame.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Iron Man",
     imagen: "imagen/iroman1.webp",
     descripcion: "“Tony Stark crea su primera armadura para escapar del peligro y se convierte en el legendario Iron Man 🦾⚡.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/iroman1.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Iron Man 2",
     imagen: "imagen/iroman2.jpg",
     descripcion: "“Nuevos enemigos, más poder… ¡y el doble de acción! 🔥⚡.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/iroman2.mp4",
     categoria: "peliculas"
   },
   {
     titulo: "Iron Man 3",
     imagen: "imagen/iroman3.webp",
     descripcion: "“Tony enfrenta su mayor prueba… sin su armadura💥💔.”",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: "video/peliculas/iroman3.mp4",
     categoria: "peliculas"
   },
 
@@ -309,7 +309,7 @@ const peliculas = [
     titulo: "La teoria del big bang",
     descripcion: " ...",
     temporada: "Temporada 1",
-    imagen: "imagen/",
+    imagen: "imagen/t1.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -323,7 +323,7 @@ const peliculas = [
     titulo: "La teoria del big bang T2",
     descripcion: " ...",
     temporada: "Temporada 2",
-    imagen: "imagen/",
+    imagen: "imagen/t2.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -337,7 +337,7 @@ const peliculas = [
     titulo: "La teoria del big bang T3",
     descripcion: " ...",
     temporada: "Temporada 3",
-    imagen: "imagen/",
+    imagen: "imagen/t3.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -351,7 +351,7 @@ const peliculas = [
     titulo: "La teoria del big bang T4",
     descripcion: " ...",
     temporada: "Temporada 4",
-    imagen: "imagen/",
+    imagen: "imagen/t4.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -365,7 +365,7 @@ const peliculas = [
     titulo: "La teoria del big bang T5",
     descripcion: " ...",
     temporada: "Temporada 5",
-    imagen: "imagen/",
+    imagen: "imagen/t5.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -379,7 +379,7 @@ const peliculas = [
     titulo: "La teoria del big bang T6",
     descripcion: " ...",
     temporada: "Temporada 6",
-    imagen: "imagen/",
+    imagen: "imagen/t6.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -393,7 +393,7 @@ const peliculas = [
     titulo: "La teoria del big bang T7",
     descripcion: " ...",
     temporada: "Temporada 7",
-    imagen: "imagen/",
+    imagen: "imagen/t7.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -407,7 +407,7 @@ const peliculas = [
     titulo: "La teoria del big bang T8",
     descripcion: " ...",
     temporada: "Temporada 8",
-    imagen: "imagen/",
+    imagen: "imagen/t8.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -421,7 +421,7 @@ const peliculas = [
     titulo: "La teoria del big bang T9",
     descripcion: " ...",
     temporada: "Temporada 9",
-    imagen: "imagen/",
+    imagen: "imagen/t9.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -435,7 +435,7 @@ const peliculas = [
     titulo: "La teoria del big bang T10",
     descripcion: " ...",
     temporada: "Temporada 10",
-    imagen: "imagen/",
+    imagen: "imagen/t10.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -449,7 +449,7 @@ const peliculas = [
     titulo: "La teoria del big bang T11",
     descripcion: " ...",
     temporada: "Temporada 11",
-    imagen: "imagen/",
+    imagen: "imagen/t11.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -463,7 +463,7 @@ const peliculas = [
     titulo: "La teoria del big bang T12",
     descripcion: " ...",
     temporada: "Temporada 12",
-    imagen: "imagen/",
+    imagen: "imagen/t12.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/la teoria del big bang/L4 T30R14 D3L B1G B4NG 1x01.mp4" },
@@ -477,7 +477,28 @@ const peliculas = [
     titulo: "Peace Maker",
     descripcion: " ...",
     temporada: "Temporada 1",
-    imagen: "imagen/",
+    imagen: "imagen/peacet1.webp",
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    episodios: [
+      { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/peacemaker/capitulo1.mp4" },
+      { titulo: "Capítulo 2", videoUrl: "video/entretenimiento/peacemaker/capitulo2.mp4" },
+      { titulo: "Capítulo 3", videoUrl: "video/entretenimiento/peacemaker/capitulo3.mp4" },
+      { titulo: "Capítulo 4", videoUrl: "video/entretenimiento/peacemaker/capitulo4.mp4" },
+      { titulo: "Capítulo 5", videoUrl: "video/entretenimiento/peacemaker/capitulo5.mp4" },
+      { titulo: "Capítulo 6", videoUrl: "video/entretenimiento/peacemaker/capitulo6.mp4" },
+      { titulo: "Capítulo 7", videoUrl: "video/entretenimiento/peacemaker/capitulo7.mp4" },
+      { titulo: "Capítulo 8", videoUrl: "video/entretenimiento/peacemaker/capitulo8.mp4" },
+      { titulo: "Capítulo 9", videoUrl: "video/entretenimiento/peacemaker/capitulo9.mp4" },
+      { titulo: "Capítulo 10", videoUrl: "video/entretenimiento/peacemaker/capitulo10.mp4" },
+      // ...
+    ]
+  },
+  {
+    categoria: "entretenimiento",
+    titulo: "Peace Maker",
+    descripcion: " ...",
+    temporada: "Temporada 1",
+    imagen: "imagen/peacet2.webp",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     episodios: [
       { titulo: "Capítulo 1", videoUrl: "video/entretenimiento/peacemaker/capitulo1.mp4" },
